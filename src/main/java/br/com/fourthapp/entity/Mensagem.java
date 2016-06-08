@@ -26,7 +26,7 @@ public class Mensagem implements Serializable {
     @ManyToOne
     private Usuario usuario;
     @ManyToOne
-    private Grupo grupo;
+    private Chat chat;
 
     public Mensagem() {
     }
@@ -63,13 +63,15 @@ public class Mensagem implements Serializable {
         this.usuario = usuario;
     }
 
-    public Grupo getGrupo() {
-        return grupo;
+    public Chat getChat() {
+        return chat;
     }
 
-    public void setGrupo(Grupo grupo) {
-        this.grupo = grupo;
+    public void setChat(Chat chat) {
+        this.chat = chat;
     }
+
+    
 
     @Override
     public int hashCode() {
